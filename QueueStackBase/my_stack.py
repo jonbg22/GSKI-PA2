@@ -16,7 +16,7 @@ class Stack:
         return self.container.pop_back()
     
     def get_size(self):
-        return self.container.get_size
+        return self.container.get_size()
 
     def __str__(self):
         return str(self.container)
