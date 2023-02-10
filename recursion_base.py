@@ -11,10 +11,22 @@ def print_to_screen(head):
         print("")
 
 def get_size(head):
-    return 0
+    if head == None:
+        return 0
+    else:
+        return 1 + get_size(head.next)
+
 
 def reverse_list(head):
-    return head
+    if head == None:
+        return head
+    if head.next == None:
+        return head
+    
+    temp = reverse_list(head.next)
+    head.next.next = head
+    head.next = None
+    return temp
 
 def palindrome(head):
     return True
