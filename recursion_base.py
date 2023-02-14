@@ -29,7 +29,12 @@ def reverse_list(head):
     return temp
 
 def palindrome(head):
-    return True
+    if head == None:
+        return head
+    if head.next == None:
+        return head
+    if head == reverse_list(head):
+        return palindrome(head.next)
 
 if __name__ == "__main__":
     ##
